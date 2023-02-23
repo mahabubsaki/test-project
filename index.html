@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind and daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- navbar part -->
+    <nav>
+        <div class="navbar bg-accent">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main part -->
+    <main class="flex p-5">
+        <!-- card container -->
+        <div class="w-3/4 grid gap-5 grid-cols-1 md:grid-cols-3 bg-red-400">
+            <!-- first card -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl" id="shoe-card">
+                <figure><img src="./img/1.avif" alt="Shoes" class="h-48 w-full" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoe</h2>
+                    <p class="text-xl font-bold">$<span id="shoe-price">150</span></p>
+                    <input id="shoe-field" type="text" placeholder="Type here"
+                        class="input input-bordered w-full max-w-xs" />
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary" id="shoe-btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- second card -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./img/2.avif" alt="Shoes" class="h-48 w-full" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Bag</h2>
+                    <p class="text-xl font-bold">$<span id="bag-price">45</span></p>
+                    <input id="bag-field" type="text" placeholder="Type here"
+                        class="input input-bordered w-full max-w-xs" />
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary" id="bag-btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- third card -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./img/3.avif" alt="Shoes" class="h-48 w-full" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Watch</h2>
+                    <p class="text-xl font-bold">$100</p>
+                    <p>Quantiy : 1</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- fourth card -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./img/4.avif" alt="Shoes" class="h-48 w-full" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Bottle</h2>
+                    <p class="text-xl font-bold">$10</p>
+                    <p>Quantiy : 2</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- fifth card -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./img/5.avif" alt="Shoes" class="h-48 w-full" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Cap</h2>
+                    <p class="text-xl font-bold">$90</p>
+                    <p>Quantiy : 3</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary" id="cap-btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- sixth card -->
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./img/6.avif" alt="Shoes" class="h-48 w-full" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">T-Shirt</h2>
+                    <p class="text-xl font-bold">$30</p>
+                    <p>Quantiy : 4</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- calculation part -->
+        <div class="w-1/4 bg-green-200 grid">
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>SubTotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    <tfoot>
+
+                    </tfoot>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Total : <span id="total">0</span> </th>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
